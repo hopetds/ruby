@@ -8,7 +8,7 @@ def mega_sum(arg,numeric = 0)
 	if block_given?
 		arg.inject { |sum, i| sum + yield(i)} + numeric
 	else
-		without_block = arg.inject { |sum, i| sum + i } + numeric
+		arg.inject { |sum, i| sum + i } + numeric
 	end	
 end
 puts "Condiriton: (array). . Simple sum of the elements:  #{mega_sum(arr)}"
