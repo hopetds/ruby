@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 class Array
 	def odd_methodd
-	    (self.select! {|i| yield(i)}).reject! { |i| not i%2 == 0}	    		end
+	    (self.select! {|i| yield(i)}).reject! { |i| not i%2 == 0}
+	end
 end
 puts [1, 2, 3, 4, 5, 6, 7].odd_methodd { |i| i > 2}.inspect # => [4, 6]
 puts [1, 2, 3, 4, 5, 6, 7].odd_methodd { |i| i > 10}.inspect # => nil
